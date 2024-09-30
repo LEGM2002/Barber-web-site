@@ -1,0 +1,67 @@
+/* codigo hexadecimal #_ _ _ _ _ _ para colores dos posiciones 
+para red dos para green y dos para blue, va de 0 a 9 y de A a F
+0 mayor intensidad y F para menor intensidad */
+/* rgb(#,#,#) va de 0 a 255, 0 es de mayor intensidad */
+
+/* se recomienda mantener la estructura de html en css */
+body{
+    background-color: gray;
+}
+
+.titulo-principal{
+    background-color: brown;
+    padding-left: 30px;
+    text-align: center;
+}
+
+/* margin espaciamiento externo, padding espaciamiento interno
+border para un borde */
+#banner{
+    width: 100%;
+}
+
+/* referenciar clases con . */
+.principal{
+    background-color: lightgray;
+    padding: 20px;
+}
+
+.titulo-centralizado{
+    text-align: center;
+}
+
+p{
+    text-align: center;
+}
+
+/* referenciar id con # */
+#mision{
+    font-size: 20px;
+}
+
+em strong{
+    color: brown;
+}
+
+.diferenciales{
+    background-color: white;
+    padding: 5%;
+}
+
+.items{
+    font-style: italic;
+
+}
+
+ul{
+    /* solo ocupe espacio de su contenido,
+    y los desplazamientos se puedan ajustar*/
+    display: inline-block;
+    vertical-align: top;
+    width: 20%;
+    margin-right: 15%;
+}
+
+.imagenDiferenciales{
+    width: 50%;
+}

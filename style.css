@@ -1,0 +1,342 @@
+body{
+    /* se cambia la letra a todo el body */
+    font-family: 'Montserrat', sans-serif;
+}
+
+header{
+    background-color: lightgrey;
+    /* padding para el espaciamiento interno arriba/abajo derecha/izquierda */
+    padding: 20px 0;
+}
+
+/* la mayoria de las pantallas tienen 1280px 
+alinear un div al centro con margin auto*/
+.caja{
+    width: 940px;
+    position: relative;
+    margin: 0 auto;
+}
+
+nav{
+    /* se pueda alterar la posicion del menu de navegacion */
+    position: absolute;
+    top: 110px;
+    right: 0;
+}
+
+nav li{
+    display: inline;
+    /* espaciamento arriba derecha abajo izquierda */
+    margin: 0 0 0 15px;
+}
+
+nav a{
+    text-transform: uppercase;
+    color: black;
+    /* negrita */
+    font-weight: bold;
+    font-size: 22px;
+    /* quitar el subrayado */
+    text-decoration: none;
+}
+
+/* hover para capturar movimiento del mouse */
+nav a:hover{
+    color: brown;
+    text-decoration: underline;
+}
+
+nav a:active{
+    color: #c78c19;
+}
+
+.menu-productos{
+    width: 940px;
+    margin: 0 auto;
+    padding: 50px;
+}
+
+.menu-productos li{
+    /* inline block permite colocarlos uno a lado de otro */
+    display: inline-block;
+    text-align: center;
+    width: 30%;
+    vertical-align: top;
+    /* se utilizo para ver se acomode background: #CCCCCC; */
+    /* margin para espaciamiento externo */
+    margin: 0 1.5%;
+    padding: 30px 20px;
+    /* se toma del 30% asignado */
+    box-sizing: border-box;
+    /* modificacion de bordes, border esta entre el padding y margin */
+    /* modificacion de bordes de simplificado 
+    border: width style color*/
+    border: 2px solid black;
+    /* border-radius: topleft topright bottomright bottomleft */
+    border-radius: 10px;
+    /* en style: dashed lineas, dotted punteado  */
+}
+
+/* active captura el click con el mouse */
+.menu-productos li:hover{
+    border-color:brown;
+}
+
+.menu-productos li:active{
+    border-color: #c78c19;
+}
+
+.menu-productos h2{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/* en los items se modifica el h2 al pasar el mouse */
+.menu-productos li:hover h2{
+    font-size: 33px;
+}
+
+.producto-descrip{
+    font-size: 18px;
+}
+
+.producto-precio{
+    font-size: 20px;
+    font-weight: bold;
+    /* separar de arriba */
+    margin-top: 10px;
+}
+
+footer{
+    text-align: center;
+    /* insertar imagenes de fondo */
+    background: url(imagenes/bg.jpg);
+    padding: 40px;
+}
+
+.copyright{
+    margin: 20px;
+    color: white;
+    font-size: 13px;
+}
+
+/* PAGINA DE CONTACTO */
+form{
+    margin: 40px 0;
+}
+
+form label, form legend{
+    display: block;
+    font-size: 16px;
+    margin: 0 0 10px;
+}
+
+/* al ponerle clase solo a los de text los de radio se acomodan */
+.input-padron{
+    display: block;
+    margin: 0 0 20px;
+    /* modificar el tamano de los input con padding */
+    padding: 10px 25px;
+    /* ocupara el 50% de los 940px */
+    width: 50%;
+}
+
+.checkbox{
+    margin: 20px 0;
+}
+
+.enviar{
+    width: 40%;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background: orange;
+    border: none;
+    border-radius: 5px;
+    /* transition para que al pasar el mouse no sea tan brusco
+    y se llama a una propiedad o a todas las que estan en el hover */
+    transition: 0.75s all;
+    /* se modifica el cursor a la manita apuntando */
+    cursor: pointer;
+}
+
+.enviar:hover{
+    background: darkorange;
+    /* transform para aumentar el tamano al poner el cursor sobre el,
+    con rotate se pueden girar los elementos al posicionarse sobre ellos */
+    transform: scale(1.2);
+    /* para ejecutar dos transformaciones al mismo tiempo, se deben de
+    especificar en la misma linea */
+}
+
+table{
+    /* espaciamiento externo */
+    margin: 40px 40px;
+}
+
+thead{
+    background: #555555;
+    color: white;
+    font-weight: bold;
+}
+
+td, th{
+    /* bordes de las celdas */
+    border: 1px solid #000000;
+    /* espaciamiento interno en las celdas */
+    padding: 8px 15px;
+}
+
+/* PAGINA HOME */
+.banner{
+    width: 100%;
+    margin: 15px 0;
+}
+
+.principal{
+    background: #FEFEFE;
+    padding: 3em 0;
+    width: 940px;
+    margin: 0 auto;
+}
+
+.subtitulo{
+    text-align: center;
+    /* 2em duplicar el tamano padron del navegador  */
+    font-size: 2em;
+    margin: 0 0 1em;
+    /* clear limpia las modificaciones externas */
+    clear: left;
+}
+
+/* PSEUDO-ELEMENTOS */
+/* first letter solo para modificar la primer letra del texto */
+/* .subtitulo::first-letter{
+    font-weight: bold;
+} */
+
+/* italic en las primeras lineas de los parrafos */
+/* p:first-line{
+    font-style: italic;
+} */
+
+.principal p{
+    margin: 0 0 1em;
+}
+
+.principal strong{
+    font-weight: bold;
+}
+
+.principal em{
+    font-style: italic;
+}
+
+.utensilios{
+    width: 120px;
+    /* float para que el texto se encuentre alrededor de la imagen */
+    float: left;
+    /* superior derecha inferior izquierda */
+    /* parametros en sentido horario */
+    margin: 0 15px 15px 0;
+}
+
+.mapa{
+    padding: 3em 0;
+    /* linear-gradient para degradados, se puede anadir por inclinaciones
+    con primer parametro #deg, ademas de que despues de colores se pued 
+    anadir cuanto porcentaje se quiere de ese color*/
+    background: linear-gradient(#FEFEFE,#888888);
+    /* se pone en el bloque de en medio, en el de arriba se pone el primer color
+    y en el bloque de abajo se pone el segundo color */
+}
+
+.mapa p{
+    margin: 0 0 2em;
+    text-align: center;
+}
+
+.mapa-contenido{
+    width: 940px;
+    margin: 0 auto;
+}
+
+.diferenciales{
+    padding: 3em 0;
+    background: #888888;
+}
+
+.contenido-diferenciales{
+    width: 640px;
+    margin: 0 auto;
+}
+
+.lista-diferenciales{
+    width: 40%;
+    display: inline-block;
+    /* se acomoda en la parte superior */
+    vertical-align: top;
+}
+
+/* PSEUDO-CLASES: first-child para modificar solo el primer item 
+o last-child para el ultimo, para seleccionar otro 
+se utiliza nth-child(numero de item) puede ser con
+alguna regla de correspondencia (2n) para pares*/
+.items:first-child{
+    font-weight: bold;
+}
+
+.items{
+    /* line-height para el espaciado */
+    line-height: 1.5;
+}
+
+/* se anade al inicio de los items ese simbolo */
+.items:before{
+    content: "💈";
+}
+
+.imagen-diferenciales{
+    width: 60%;
+    transition: 0.5s;
+    /* box-shadow: eje x eje y  difuminacion expansion color; para sombras */
+    box-shadow: 10px 10px 10px 10px black;
+}
+
+.imagen-diferenciales:hover{
+    opacity: 60%;
+}
+
+.video{
+    width: 560px;
+    /* centrar div */
+    margin: 1em auto;
+}
+
+/* margin/width/border: calc(#% - (#px)); sirve para poder
+variar el tamano sin importar el dispositivo donde se abra la pagina */
+
+/* si encuentras una pantalla de hasta 480px se ejecuta lo que se declara adentro */
+/* hacer una pagina responsiva es decir que se adapte a cualquier dispositivo, para ello
+podemos modificar en la consola con ctrl + shift + i */
+@media screen and (max-width:480px){
+    /* se acomoda el menu principal */
+    h1{
+        text-align: center;
+    }
+
+    nav{
+        position: static;
+    }
+
+    /* se modifican las secciones principales para que se adapte a cualquier disposititivo */
+    .caja, .principal, .mapa-contenido, .contenido-diferenciales, .video{
+        width: auto;
+    }
+
+    /* se acomoda la lista por arriba de la imagen */
+    .lista-diferenciales, .imagen-diferenciales{
+        width: 100%;
+    }
+}
